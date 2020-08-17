@@ -32764,7 +32764,7 @@ var App = function () {
         react_1.default.createElement("div", null,
             react_1.default.createElement(NavBar_1.default, null),
             react_1.default.createElement(react_router_dom_1.Switch, null,
-                react_1.default.createElement(react_router_dom_1.Route, { path: "/", component: Top_1.default }),
+                react_1.default.createElement(react_router_dom_1.Route, { path: "/", exact: true, component: Top_1.default }),
                 react_1.default.createElement(react_router_dom_1.Route, { path: "/about", component: About_1.default }),
                 react_1.default.createElement(react_router_dom_1.Route, { path: "/user", component: User_1.default })))));
 };
