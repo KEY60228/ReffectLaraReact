@@ -29,6 +29,7 @@
         "typescript": "^3.9.7"
     },
     "dependencies": {
+        "react-router-dom": "^5.2.0",
         "ts-loader": "^8.0.2"
     }
 }

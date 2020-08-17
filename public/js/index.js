@@ -28612,6 +28612,75 @@ if (false) {} else {
 
 /***/ }),
 
+/***/ "./resources/ts/About.tsx":
+/*!********************************!*\
+  !*** ./resources/ts/About.tsx ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var react_1 = __importDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+var About = function () {
+    return react_1.default.createElement("h1", null, "About\u30DA\u30FC\u30B8");
+};
+exports.default = About;
+
+
+/***/ }),
+
+/***/ "./resources/ts/NavBar.tsx":
+/*!*********************************!*\
+  !*** ./resources/ts/NavBar.tsx ***!
+  \*********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var react_1 = __importDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+var NavBar = function () {
+    return (react_1.default.createElement("nav", null,
+        react_1.default.createElement("ul", { className: "nav" },
+            react_1.default.createElement("li", null, "About"),
+            react_1.default.createElement("li", null, "User"))));
+};
+exports.default = NavBar;
+
+
+/***/ }),
+
+/***/ "./resources/ts/User.tsx":
+/*!*******************************!*\
+  !*** ./resources/ts/User.tsx ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var react_1 = __importDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+var User = function () {
+    return react_1.default.createElement("h1", null, "User\u30DA\u30FC\u30B8");
+};
+exports.default = User;
+
+
+/***/ }),
+
 /***/ "./resources/ts/index.tsx":
 /*!********************************!*\
   !*** ./resources/ts/index.tsx ***!
@@ -28627,9 +28696,15 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var react_1 = __importDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
 var react_dom_1 = __importDefault(__webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js"));
-function App() {
-    return react_1.default.createElement("h1", null, "Hello React!");
-}
+var NavBar_1 = __importDefault(__webpack_require__(/*! ./NavBar */ "./resources/ts/NavBar.tsx"));
+var About_1 = __importDefault(__webpack_require__(/*! ./About */ "./resources/ts/About.tsx"));
+var User_1 = __importDefault(__webpack_require__(/*! ./User */ "./resources/ts/User.tsx"));
+var App = function () {
+    return (react_1.default.createElement(react_1.default.Fragment, null,
+        react_1.default.createElement(NavBar_1.default, null),
+        react_1.default.createElement(About_1.default, null),
+        react_1.default.createElement(User_1.default, null)));
+};
 react_dom_1.default.render(react_1.default.createElement(App, null), document.getElementById("app"));
 
 
