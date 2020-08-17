@@ -32695,6 +32695,28 @@ exports.default = NavBar;
 
 /***/ }),
 
+/***/ "./resources/ts/Top.tsx":
+/*!******************************!*\
+  !*** ./resources/ts/Top.tsx ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var react_1 = __importDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+var Top = function () {
+    return react_1.default.createElement("h1", null, "Top\u30DA\u30FC\u30B8");
+};
+exports.default = Top;
+
+
+/***/ }),
+
 /***/ "./resources/ts/User.tsx":
 /*!*******************************!*\
   !*** ./resources/ts/User.tsx ***!
@@ -32736,12 +32758,15 @@ var react_router_dom_1 = __webpack_require__(/*! react-router-dom */ "./node_mod
 var NavBar_1 = __importDefault(__webpack_require__(/*! ./NavBar */ "./resources/ts/NavBar.tsx"));
 var About_1 = __importDefault(__webpack_require__(/*! ./About */ "./resources/ts/About.tsx"));
 var User_1 = __importDefault(__webpack_require__(/*! ./User */ "./resources/ts/User.tsx"));
+var Top_1 = __importDefault(__webpack_require__(/*! ./Top */ "./resources/ts/Top.tsx"));
 var App = function () {
     return (react_1.default.createElement(react_router_dom_1.BrowserRouter, null,
         react_1.default.createElement("div", null,
             react_1.default.createElement(NavBar_1.default, null),
-            react_1.default.createElement(react_router_dom_1.Route, { path: "/about", component: About_1.default }),
-            react_1.default.createElement(react_router_dom_1.Route, { path: "/user", component: User_1.default }))));
+            react_1.default.createElement(react_router_dom_1.Switch, null,
+                react_1.default.createElement(react_router_dom_1.Route, { path: "/", component: Top_1.default }),
+                react_1.default.createElement(react_router_dom_1.Route, { path: "/about", component: About_1.default }),
+                react_1.default.createElement(react_router_dom_1.Route, { path: "/user", component: User_1.default })))));
 };
 react_dom_1.default.render(react_1.default.createElement(App, null), document.getElementById("app"));
 
