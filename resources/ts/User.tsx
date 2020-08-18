@@ -1,30 +1,24 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import axios from 'axios'
 import Button from '@material-ui/core/Button'
 
 const User = () => {
-  const users = [
-    {
-      id: 1,
-      name: 'John',
-      email: 'john@example.com'
-    },
-    {
-      id: 2,
-      name: 'Kevin',
-      email: 'kevin@example.com'
-    },
-    {
-      id: 1,
-      name: 'Joshua',
-      email: 'joshua@example.com'
-    }
-  ]
-  
+  const [users, setUsers] = useState([]);
+
+  useEffect(() => {
+    getUsers()
+  }, [])
+
+  const getUsers = async() => {
+    const response = await axios.get('/api/user')
+    setUsers(response.data.users)
+  }
+
   return (
     <>
       <h1>Userページ</h1>
       <ul>
-        { users.map((user) => <li key={user.id}>{user.name}</li>)}
+        { users.map((user: any) => <li key={user.id}>{user.name}</li>)}
       </ul>
       <Button variant="contained" color="primary">
         Hello World!
