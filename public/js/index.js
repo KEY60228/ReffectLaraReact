@@ -45714,8 +45714,26 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var react_1 = __importDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
 var Button_1 = __importDefault(__webpack_require__(/*! @material-ui/core/Button */ "./node_modules/@material-ui/core/esm/Button/index.js"));
 var User = function () {
+    var users = [
+        {
+            id: 1,
+            name: 'John',
+            email: 'john@example.com'
+        },
+        {
+            id: 2,
+            name: 'Kevin',
+            email: 'kevin@example.com'
+        },
+        {
+            id: 1,
+            name: 'Joshua',
+            email: 'joshua@example.com'
+        }
+    ];
     return (react_1.default.createElement(react_1.default.Fragment, null,
         react_1.default.createElement("h1", null, "User\u30DA\u30FC\u30B8"),
+        react_1.default.createElement("ul", null, users.map(function (user) { return react_1.default.createElement("li", { key: user.id }, user.name); })),
         react_1.default.createElement(Button_1.default, { variant: "contained", color: "primary" }, "Hello World!")));
 };
 exports.default = User;
@@ -45754,8 +45772,8 @@ react_dom_1.default.render(react_1.default.createElement(react_1.default.Fragmen
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /var/www/react/resources/ts/index.tsx */"./resources/ts/index.tsx");
-module.exports = __webpack_require__(/*! /var/www/react/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /Users/yamaguchikenta/Training/Laravel-React/src/resources/ts/index.tsx */"./resources/ts/index.tsx");
+module.exports = __webpack_require__(/*! /Users/yamaguchikenta/Training/Laravel-React/src/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
