@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import axios from 'axios'
 import Button from '@material-ui/core/Button'
 
@@ -18,7 +19,13 @@ const User = () => {
     <>
       <h1>Userページ</h1>
       <ul>
-        { users.map((user: any) => <li key={user.id}>{user.name}</li>)}
+        { users.map((user: any) => {
+          return (
+            <li key={user.id}>
+              <Link to={`/user/${user.id}`}>{user.name}</Link>
+            </li>
+          )
+        })}
       </ul>
       <Button variant="contained" color="primary">
         Hello World!

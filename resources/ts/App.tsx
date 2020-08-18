@@ -5,6 +5,7 @@ import NavBar from './NavBar'
 import About from './About'
 import User from './User'
 import Top from './Top'
+import UserDetail from './UserDetail'
 
 const App = () => {
   return (
@@ -14,7 +15,8 @@ const App = () => {
         <Switch>
           <Route path="/" exact component={ Top } />
           <Route path="/about" component={ About } />
-          <Route path="/user" component={ User } />
+          <Route path="/user" exact component={ User } />
+          <Route path="/user/:id" component={ UserDetail } />
         </Switch>
       </div>
     </Router>
