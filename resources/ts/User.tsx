@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
-import Button from '@material-ui/core/Button'
 
 const User = () => {
   const [users, setUsers] = useState([]);
@@ -27,9 +26,6 @@ const User = () => {
           )
         })}
       </ul>
-      <Button variant="contained" color="primary">
-        Hello World!
-      </Button>
     </>
   )
 }
